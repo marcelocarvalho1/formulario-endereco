@@ -1,0 +1,84 @@
+$primary-color: #007bff;
+$hover-color: #197be4;
+$background-color: #2c60c24f;
+$form-background-color: #fff;
+$text-color: #333;
+$border-color: #ccc;
+$box-shadow-color: rgba(0, 0, 0, 0.1);
+$focus-shadow-color: rgba(0, 123, 255, 0.5);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: $form-background-color;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px $box-shadow-color;
+    max-width: 400px;
+    width: 100%;
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: $text-color;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        font-size: 16px;
+
+        &:focus {
+            border-color: $primary-color;
+            outline: none;
+            box-shadow: 0 0 5px $focus-shadow-color;
+        }
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: $primary-color;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    form {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        padding: 8px;
+    }
+}
